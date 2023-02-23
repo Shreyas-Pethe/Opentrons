@@ -1,3 +1,23 @@
+'''
+LARP is a protocol used for synthesizing nanoparticles of perovskites.
+This simple mixing protocol mixes 2 reagents (MABr and PbBr2) from the reservoir and then dilutes them with antisolvent (toluene)
+to precipitate out the nanoparticles
+
+A separate variable was used to track the level of solution inside the reservoir after every aspiration step and liquid was aspirated 
+with only the pipette tip touching the liquid in order to avoid cross-contamination
+
+NOTE : CUSTOM LABWARE :
+Tuberack (eppendorf 2ml) was used for the definitiion of the protocol howere in actual run the home-built stirrir was used.
+Please make sure calibration is done properly before running the protocol
+
+'''
+
+
+
+
+
+
+
 from opentrons import protocol_api
 import pandas as pd
 import numpy as np
@@ -13,13 +33,13 @@ metadata = {
     }
 
 #============================================================================================================
-#protocol run function
+# protocol run function
 #============================================================================================================
 
 def run(protocol: protocol_api.ProtocolContext):
     protocol.home()
 #============================================================================================================
-    #labware & pipette definitions
+# labware & pipette definitions
 #============================================================================================================
     
     tip_300 = protocol.load_labware('opentrons_96_tiprack_300ul', 11)
@@ -33,7 +53,7 @@ def run(protocol: protocol_api.ProtocolContext):
     p1000.default_speed = 100
     
 #============================================================================================================
-# Reading the file
+# Arrays for positions
 #============================================================================================================
 
     disp_pos = np.array([
