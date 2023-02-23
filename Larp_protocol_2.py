@@ -1,4 +1,7 @@
 '''
+Author : Shreyas Pethe
+Updated on : 23/2/2023
+
 LARP is a protocol used for synthesizing nanoparticles of perovskites.
 This simple mixing protocol mixes 2 reagents (MABr and PbBr2) from the reservoir and then dilutes them with antisolvent (toluene)
 to precipitate out the nanoparticles
@@ -9,13 +12,7 @@ with only the pipette tip touching the liquid in order to avoid cross-contaminat
 NOTE : CUSTOM LABWARE :
 Tuberack (eppendorf 2ml) was used for the definitiion of the protocol howere in actual run the home-built stirrir was used.
 Please make sure calibration is done properly before running the protocol
-
 '''
-
-
-
-
-
 
 
 from opentrons import protocol_api
